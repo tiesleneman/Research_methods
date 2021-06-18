@@ -1,0 +1,24 @@
+First command is to count the amount of curse words used in 2012 november. 
+The command egrep -wic works as follows: 
+the -w has as function to only return lines containing one of the curse words.
+the - i has as function that the words aren't capital sensitive. 
+the - c has as function to count the returned lines and print the total number.
+
+zless /net/corpora/twitter2/Tweets/2012/11/*:17.out.gz | /net/corpora/twitter2/tools/tweet2tab text | egrep -wic 'kut|fuck|shit|fucking|godverdomme|tering|pleuris|slet|lul|sukkel|bitch|hoer|flikker|klootzak|eikel|trut|tyfus|snotneus|flapdrol|kutwijf'
+
+Second command is to count the amount of curse words used in 2020 november.
+zless /net/corpora/twitter2/Tweets/2020/11/*:17.out.gz | /net/corpora/twitter2/tools/tweet2tab text | egrep -wic 'kut|fuck|shit|fucking|godverdomme|tering|pleuris|slet|lul|sukkel|bitch|hoer|flikker|klootzak|eikel|trut|tyfus|snotneus|flapdrol|kutwijf'
+
+Third command is to count the total amount of tweets tweeted in 2012 november.
+zless /net/corpora/twitter2/Tweets/2012/11/*out.gz | /net/corpora/twitter2/tools/tweet2tab text | wc -l
+
+Fourth command is to count the total amount of tweets tweeted in 2020 november.
+zless /net/corpora/twitter2/Tweets/2012/11/*out.gz | /net/corpora/twitter2/tools/tweet2tab text | wc -l
+
+Fifth command is to see all the tweets containing curse words in 2012 november.
+zless /net/corpora/twitter2/Tweets/2012/11/*:17.out.gz | /net/corpora/twitter2/tools/tweet2tab text | egrep -wi 'kut|fuck|shit|fucking|godverdomme|tering|pleuris|slet|lul|sukkel|bitch|hoer|flikker|klootzak|eikel|trut|tyfus|snotneus|flapdrol|kutwijf'
+
+sixth command is to see all the tweets containing curse words in 2020 november.
+zless /net/corpora/twitter2/Tweets/2020/11/*:17.out.gz | /net/corpora/twitter2/tools/tweet2tab text | egrep -wi 'kut|fuck|shit|fucking|godverdomme|tering|pleuris|slet|lul|sukkel|bitch|hoer|flikker|klootzak|eikel|trut|tyfus|snotneus|flapdrol|kutwijf'
+
+
